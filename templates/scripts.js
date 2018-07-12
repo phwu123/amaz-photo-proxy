@@ -1,4 +1,4 @@
-module.exports = (items, props) => `
+module.exports = (items) => `
   <script src="/lib/react.production.min.js"></script>
   <script src="/lib/react-dom.production.min.js"></script>
 
@@ -9,7 +9,7 @@ module.exports = (items, props) => `
   <script>
     ${items.map(item => `
       ReactDOM.hydrate(
-        React.createElement(${item}, ${props}),
+        React.createElement(${item}),
         document.getElementById('${item}')
       );
     `).join('\n')}
