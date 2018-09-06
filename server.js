@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 
 app.get('/id/:id', (req, res) => {
   console.log('aa ', req.params.id)
-  axios('http://18.191.138.148/api/id/' + req.params.id)
+  axios('https://mysite/api/id/' + req.params.id)
     .then(cats => {
       res.send(cats.data);
     })
