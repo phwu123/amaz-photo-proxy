@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index.js"
+    "start": "nodemon -i ./client/services -i ./templates/services server.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,15 @@
   "homepage": "https://github.com/slatherin/Jamison-Proxy-Server#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "helmet": "^3.12.1",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.1.2",
     "nodemon": "^1.17.5",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }

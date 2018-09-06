@@ -1,8 +1,8 @@
 FROM node:9
 RUN mkdir /proxy
-ADD /proxy /proxy
 WORKDIR /proxy
+COPY package*.json ./
 RUN npm install
-
-EXPOSE 3003
+COPY . .
+EXPOSE 3000
 CMD ["npm", "start"]
